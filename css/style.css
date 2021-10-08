@@ -145,6 +145,10 @@ select {
 }
 
 /* Второй вариант прижать футер */
+.main {
+  min-width: 0;
+}
+
 .title {
   font: inherit;
   font-size: 16px;
@@ -183,10 +187,6 @@ select {
   transform: translate(-65%, -50%) rotate(-45deg);
   border-right: 2px solid #FF3E79;
   border-bottom: 2px solid #FF3E79;
-}
-
-.main {
-  min-width: 0;
 }
 
 .brands {
@@ -255,43 +255,43 @@ select {
 .brands__item--lenovo::before {
   width: 108px;
   height: 32px;
-  background-image: -webkit-image-set(url("/img/icons/lenovo.png") 1x);
+  background-image: -webkit-image-set(url("../img/icons/lenovo.png") 1x);
 }
 .brands__item--samsung::before {
   width: 116px;
   height: 39px;
-  background-image: -webkit-image-set(url("/img/icons/samsung.png") 1x);
+  background-image: -webkit-image-set(url("../img/icons/samsung.png") 1x);
 }
 .brands__item--apple::before {
   width: 44px;
   height: 44px;
-  background-image: -webkit-image-set(url("/img/icons/apple.png") 1x);
+  background-image: -webkit-image-set(url("../img/icons/apple.png") 1x);
 }
 .brands__item--viewsonic::before {
   width: 128px;
   height: 21px;
-  background-image: -webkit-image-set(url("/img/icons/view-sonic.png") 1x);
+  background-image: -webkit-image-set(url("../img/icons/view-sonic.png") 1x);
 }
 .brands__item--bosh::before {
   width: 128px;
   height: 29px;
-  background-image: -webkit-image-set(url("/img/icons/bosh.png") 1x);
+  background-image: -webkit-image-set(url("../img/icons/bosh.png") 1x);
 }
 .brands__item--hp::before {
   width: 52px;
   height: 52px;
   left: 10px;
-  background-image: -webkit-image-set(url("/img/icons/hp.png") 1x);
+  background-image: -webkit-image-set(url("../img/icons/hp.png") 1x);
 }
 .brands__item--acer::before {
   width: 94px;
   height: 24px;
-  background-image: -webkit-image-set(url("/img/icons/acer.png") 1x);
+  background-image: -webkit-image-set(url("../img/icons/acer.png") 1x);
 }
 .brands__item--sony::before {
   width: 128px;
   height: 26px;
-  background-image: -webkit-image-set(url("/img/icons/sony.png") 1x);
+  background-image: -webkit-image-set(url("../img/icons/sony.png") 1x);
 }
 @media (min-width: 768px) {
   .brands__item {
