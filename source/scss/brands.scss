@@ -44,7 +44,7 @@
   @media(min-width: $min-tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    height: 180px;
+    height: 179px;
     overflow: hidden;
     transition: height ease 0.5s;
 
@@ -55,7 +55,7 @@
 
   @media(min-width: 992px) {
     &--visible {
-      height: 270px;
+      height: 267px;
     }
   }
 }
@@ -82,7 +82,7 @@
     &--lenovo::before {
       width: 108px;
       height: 32px;
-      background-image: -webkit-image-set(
+      background-image: image-set(
         url('../img/icons/lenovo.png') 1x
       );
     }
@@ -90,7 +90,7 @@
     &--samsung::before {
       width: 116px;
       height: 39px;
-      background-image: -webkit-image-set(
+      background-image: image-set(
         url('../img/icons/samsung.png') 1x
       );
     }
@@ -98,7 +98,7 @@
     &--apple::before {
       width: 44px;
       height: 44px;
-      background-image: -webkit-image-set(
+      background-image: image-set(
         url('../img/icons/apple.png') 1x
       );
     }
@@ -106,7 +106,7 @@
     &--viewsonic::before {
       width: 128px;
       height: 21px;
-      background-image: -webkit-image-set(
+      background-image: image-set(
         url('../img/icons/view-sonic.png') 1x
       );
     }
@@ -114,7 +114,7 @@
     &--bosh::before {
       width: 128px;
       height: 29px;
-      background-image: -webkit-image-set(
+      background-image: image-set(
         url('../img/icons/bosh.png') 1x
       );
     }
@@ -123,7 +123,7 @@
       width: 52px;
       height: 52px;
       left: 10px;
-      background-image: -webkit-image-set(
+      background-image: image-set(
         url('../img/icons/hp.png') 1x
       );
     }
@@ -131,7 +131,7 @@
     &--acer::before {
       width: 94px;
       height: 24px;
-      background-image: -webkit-image-set(
+      background-image: image-set(
         url('../img/icons/acer.png') 1x
       );
     }
@@ -139,7 +139,7 @@
     &--sony::before {
       width: 128px;
       height: 26px;
-      background-image: -webkit-image-set(
+      background-image: image-set(
         url('../img/icons/sony.png') 1x
       );
     }

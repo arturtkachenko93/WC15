@@ -245,7 +245,7 @@ button:focus-visible {
   .brands__list {
     display: flex;
     flex-wrap: wrap;
-    height: 180px;
+    height: 179px;
     overflow: hidden;
     transition: height ease 0.5s;
   }
@@ -255,7 +255,7 @@ button:focus-visible {
 }
 @media (min-width: 992px) {
   .brands__list--visible {
-    height: 270px;
+    height: 267px;
   }
 }
 
@@ -281,42 +281,50 @@ button:focus-visible {
   width: 108px;
   height: 32px;
   background-image: -webkit-image-set(url("../img/icons/lenovo.png") 1x);
+  background-image: image-set(url("../img/icons/lenovo.png") 1x);
 }
 .brands__item--samsung::before {
   width: 116px;
   height: 39px;
   background-image: -webkit-image-set(url("../img/icons/samsung.png") 1x);
+  background-image: image-set(url("../img/icons/samsung.png") 1x);
 }
 .brands__item--apple::before {
   width: 44px;
   height: 44px;
   background-image: -webkit-image-set(url("../img/icons/apple.png") 1x);
+  background-image: image-set(url("../img/icons/apple.png") 1x);
 }
 .brands__item--viewsonic::before {
   width: 128px;
   height: 21px;
   background-image: -webkit-image-set(url("../img/icons/view-sonic.png") 1x);
+  background-image: image-set(url("../img/icons/view-sonic.png") 1x);
 }
 .brands__item--bosh::before {
   width: 128px;
   height: 29px;
   background-image: -webkit-image-set(url("../img/icons/bosh.png") 1x);
+  background-image: image-set(url("../img/icons/bosh.png") 1x);
 }
 .brands__item--hp::before {
   width: 52px;
   height: 52px;
   left: 10px;
   background-image: -webkit-image-set(url("../img/icons/hp.png") 1x);
+  background-image: image-set(url("../img/icons/hp.png") 1x);
 }
 .brands__item--acer::before {
   width: 94px;
   height: 24px;
   background-image: -webkit-image-set(url("../img/icons/acer.png") 1x);
+  background-image: image-set(url("../img/icons/acer.png") 1x);
 }
 .brands__item--sony::before {
   width: 128px;
   height: 26px;
   background-image: -webkit-image-set(url("../img/icons/sony.png") 1x);
+  background-image: image-set(url("../img/icons/sony.png") 1x);
 }
 @media (min-width: 768px) {
   .brands__item {
