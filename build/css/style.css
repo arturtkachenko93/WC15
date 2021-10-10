@@ -250,7 +250,7 @@ button:focus-visible {
     transition: height ease 0.5s;
   }
   .brands__list--visible {
-    height: 360px;
+    height: 357px;
   }
 }
 @media (min-width: 992px) {

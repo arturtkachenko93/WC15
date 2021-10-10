@@ -44,7 +44,7 @@ const fileInclude = require("gulp-file-include");
 const imagemin = require("gulp-imagemin");
 const svgsprite = require("gulp-svgstore");
 const uglify = require("gulp-uglify-es").default;
-// const ttf2woff = require("gulp-ttf2woff");
+const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 
 // HTML
@@ -141,10 +141,10 @@ exports.sprite = sprite;
 
 const fonts = () => {
   return gulp.src(path.source_folder.fonts)
-    // .pipe(ttf2woff())
+    .pipe(ttf2woff())
     .pipe(gulp.dest(path.project_folder.fonts))
     .pipe(gulp.src(path.source_folder.fonts))
-    // .pipe(ttf2woff2())
+    .pipe(ttf2woff2())
     .pipe(gulp.dest(path.project_folder.fonts))
     .pipe(gulp.src('source/fonts/*.{woff, woff2}'))
     .pipe(gulp.dest(path.project_folder.fonts));
@@ -218,7 +218,7 @@ exports.vendorCSS = vendorCSS;
 
 const build = gulp.series(
   clean,
-  gulp.parallel(html, styles, scripts, images, sprite, fonts)
+  gulp.parallel(html, fonts, styles, scripts, images, sprite)
 );
 
 exports.build = build;
@@ -226,6 +226,6 @@ exports.build = build;
 // Default
 
 exports.default = gulp.series(
-  gulp.parallel(html, styles, scripts, vendorJS,vendorCSS),
+  gulp.parallel(html, styles, scripts, vendorJS, vendorCSS),
   gulp.series(server, watcher)
 );
