@@ -86,6 +86,14 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/* Focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid deepskyblue;
+  outline-offset: -3px;
+}
+
+/* Глобальные стили */
 @media (min-width: 320px) {
   .container {
     padding-left: 16px;
@@ -146,6 +154,8 @@ select {
 
 /* Второй вариант прижать футер */
 .main {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
 }
 
@@ -190,8 +200,19 @@ select {
 }
 
 .brands {
+  max-width: 1120px;
   padding-bottom: 38px;
   padding-right: 0;
+}
+@media (min-width: 768px) {
+  .brands {
+    align-self: flex-end;
+  }
+}
+@media (min-width: 1440px) {
+  .brands {
+    padding-bottom: 50px;
+  }
 }
 
 .brands__title {
@@ -229,8 +250,12 @@ select {
     transition: height ease 0.5s;
   }
   .brands__list--visible {
-    height: 265px;
-    overflow: auto;
+    height: 360px;
+  }
+}
+@media (min-width: 992px) {
+  .brands__list--visible {
+    height: 270px;
   }
 }
 
@@ -328,40 +353,41 @@ select {
 }
 
 .brands__button-wrapper {
-  display: flex;
-  align-items: center;
-  padding-left: 5px;
-}
-
-.brands__icon-arrows {
   display: none;
 }
 @media (min-width: 768px) {
-  .brands__icon-arrows {
+  .brands__button-wrapper {
+    position: relative;
     display: block;
-    width: 8px;
-    height: 15px;
-    margin-right: 16px;
-    transition: transform ease-in 0.8s;
-    transform: rotate(540deg);
-  }
-  .brands__icon-arrows--rotate {
-    transform: rotate(0);
   }
 }
 
 .brands__button {
-  display: none;
+  position: relative;
+  min-width: 52px;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: 500;
+  /*   font-size: $font-size; */
+  color: #1B1C21;
+  line-height: 150%;
+  cursor: pointer;
+  padding-left: 28px;
 }
-@media (min-width: 768px) {
-  .brands__button {
-    display: inline-flex;
-    min-width: 132px;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 500;
-    /*   font-size: $font-size; */
-    color: #1B1C21;
-    line-height: 150%;
-  }
+.brands__button::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background: url("../img/icons/btn-arrows.svg") no-repeat;
+  top: 7px;
+  left: 7px;
+  width: 8px;
+  height: 15px;
+  transition: transform ease-in 0.8s;
+  transform: rotate(540deg);
+  cursor: pointer;
+}
+.brands__button--rotate::before {
+  top: 12px;
+  transform: rotate(0);
 }

@@ -79,6 +79,17 @@ select {
   }
 }
 
+
+/* Focus */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid $focus;
+  outline-offset: -3px;
+}
+
+/* Глобальные стили */
+
 .container {
   @media (min-width: $min-mobile-width) {
     padding-left: 16px;

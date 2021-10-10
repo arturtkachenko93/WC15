@@ -1,28 +1,27 @@
 /* Buttons "Показать все/Скрыть все" */
 
-const buttonStatus = (show, icon) => {
+const buttonStatus = (show) => {
   const buttonBrands = document.querySelector('.brands__button');
-  const iconBtnBrands = document.querySelector('.brands__icon-arrows');
   const listBrands = document.querySelector('.brands__list');
 
   buttonBrands.addEventListener('click', (e) => {
     e.preventDefault();
     listBrands.classList.toggle(show);
     buttonTextToogle();
-    iconBtnBrands.classList.toggle(icon);
   });
 
   const buttonTextToogle = () => {
     if (buttonBrands.textContent===`Показать все`) {
       buttonBrands.textContent = `Скрыть`;
-
+      buttonBrands.classList.add('brands__button--rotate');
     } else if (buttonBrands.textContent===`Скрыть`){
       buttonBrands.textContent = `Показать все`;
+      buttonBrands.classList.remove('brands__button--rotate');
     }
   }
 }
 
-buttonStatus('brands__list--visible', 'brands__icon-arrows--rotate');
+buttonStatus('brands__list--visible');
 
 
 /* Swiper slider */
